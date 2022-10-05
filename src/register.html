@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Register</title>
+</head>
+<body>
+    <form class="register-info" onsubmit="return submitInfo()">
+        <h2>Regisration form</h2>
+        <div class="registerForm">
+            <table>
+                <tr>
+                    <td class="label-input">Login name:<span class="icon-valid" id="valid-username" style="color:red">*</span></td>
+                    <td><input name="username" class="input-text" type="text" id="username"  pattern="\w{5,}" placeholder="&nbsp" required></td>
+                </tr>
+                <tr>
+                    <td class="label-input">Password:<span class="icon-valid" id="valid-password" style="color:red">*</span></td>
+                    <td><input class="input-text" type="password" id="password" pattern=".{5,}" placeholder="&nbsp" required></td>
+                </tr>
+                <tr>
+                    <td class="label-input">Password confirm:<span class="icon-valid" id="valid-repass" style="color:red">*</span></td>
+                    <td><input class="input-text" type="password" id="repass" placeholder="&nbsp" required></td>
+                </tr>
+                <tr>
+                    <td class="label-input">Full name:<span class="icon-valid" id="valid-name" style="color:red">*</span></td>
+                    <td><input class="input-text" type="text" id="name" pattern=".{1,}" placeholder="&nbsp" required></td>
+                </tr>
+                <tr>
+                    <td class="label-input">Address:<span class="icon-valid" id="valid-address" style="color:red">*</span></td>
+                    <td><input class="input-text" type="text" id="address" pattern=".{1,}" placeholder="&nbsp" required></td>
+                </tr>
+                <tr>
+                    <td class="label-input">Email:<span class="icon-valid" id="valid-email" style="color:red">*</span></td>
+                    <td><input class="input-text" type="email" id="email" pattern="\w+@\w+\.[a-z]{2,3}" placeholder="&nbsp" required></td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>
+                        <input checked type="radio" name="gender" class="gender" value="male">Male
+                        <input type="radio" name="gender" class="gender" value="female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Birthday</td>
+                    <td>
+                        <span>
+                            <label for="day">Day:</label>
+                            <select name="day" id="day" class="day"></select>
+                        </span>
+                        <span>
+                            <label for="month">Month:</label>
+                            <select name="month" id="month" class="month"></select>
+                        </span>
+                        <span>
+                            <label for="year">Year:</label>
+                            <select name="year" id="year" class="year">Year:</select>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td> 
+                        <select class="country">
+                            <option value="HCM">HCM</option>
+                            <option value="HN">HN</option>
+                            <option value="DN">DN</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-input">Phone Number:<span class="icon-valid" id="valid-phone" style="color:red">*</span></td>
+                    <td><input class="input-text" type="text" id="phone" pattern="\d{1,}" placeholder="&nbsp" required></td>
+                </tr>
+                <tr>
+                    <td>Hoodies</td>
+                    <td>
+                        <input type="checkbox" name="hobbies" class="hobbies" value="swimming">Swimming
+                        <input type="checkbox" name="hobbies" class="hobbies" value="dancing">Dancing
+                        <input type="checkbox" name="hobbies" class="hobbies" value="shopping">Shopping
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Comment:
+                    </td>
+                    <td>       
+                        <textarea class="input-text" id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div id="button_id">
+                <input class="input-button-item" type="submit">
+                <input class="input-button-item" type="reset">
+            </div>
+        </div> 
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
